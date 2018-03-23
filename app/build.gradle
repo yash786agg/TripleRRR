@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.app.BIAAssign"
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies
+{
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //android-support
+    implementation 'com.android.support:appcompat-v7:'+ rootProject.supportLibraryVersion
+    compile 'com.android.support:design:'+ rootProject.supportLibraryVersion
+
+    //retrofit
+    compile 'com.squareup.retrofit2:retrofit:'+retrofitVersion
+    compile 'com.squareup.retrofit2:converter-gson:'+retrofitVersion
+
+    //Android lifecycle Dependency Injection
+    compile 'android.arch.lifecycle:runtime:'+rootProject.liveDataVersion
+    compile 'android.arch.lifecycle:extensions:'+rootProject.liveExtensionVersion
+
+    //Google map service
+    compile 'com.google.android.gms:play-services-maps:'+rootProject.googlePlayVersion
+
+    //Vector-icon
+    compile 'com.android.support:support-vector-drawable:'+ rootProject.supportLibraryVersion
+
+    //ButterKnife
+    compile 'com.jakewharton:butterknife:'+rootProject.butterknifeVersion
+    annotationProcessor 'com.jakewharton:butterknife-compiler:'+rootProject.butterknifeVersion
+
+    //Room Dependency Injection
+    compile 'android.arch.persistence.room:runtime:' + rootProject.roomVersion
+    annotationProcessor 'android.arch.persistence.room:compiler:' + rootProject.roomVersion
+
+    compile 'io.reactivex.rxjava2:rxandroid:'+rootProject.rxjavaVersion
+    compile 'com.squareup.retrofit2:adapter-rxjava2:'+ rootProject.rxRetrofitVersion
+
+    //Picasso Dependency Injection
+    compile 'com.squareup.picasso:picasso:'+rootProject.picassoVersion
+
+}

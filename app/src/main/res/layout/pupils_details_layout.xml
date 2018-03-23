@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/appBarLayout"
+        layout="@layout/appbar"/>
+
+    <ScrollView
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_20dp"
+            android:orientation="vertical"
+            android:background="@drawable/custom_rectangle">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/pupilImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_150dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/img_custom_rectangle"/>
+
+                <ProgressBar
+                    android:id="@+id/pupilImgProgress"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:indeterminateTint="@android:color/holo_green_light"
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:weightSum="1"
+               android:baselineAligned="false">
+
+               <LinearLayout
+                   android:layout_width="@dimen/dimen_0dp"
+                   android:layout_height="@dimen/dimen_60dp"
+                   android:orientation="vertical"
+                   android:layout_weight="0.4"
+                   android:paddingLeft="@dimen/dimen_20dp"
+                   android:paddingStart="@dimen/dimen_20dp"
+                   android:paddingRight="@dimen/dimen_20dp"
+                   android:paddingEnd="@dimen/dimen_20dp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textColor="@android:color/black"
+                       android:text="@string/name"
+                       android:gravity="center"
+                       android:textSize="@dimen/textSize16sp"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textColor="@android:color/black"
+                       android:text="@string/country"
+                       android:layout_marginTop="@dimen/dimen_10dp"
+                       android:textSize="@dimen/textSize16sp"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="@dimen/dimen_0dp"
+                   android:layout_height="@dimen/dimen_60dp"
+                   android:orientation="vertical"
+                   android:layout_weight="0.6"
+                   android:paddingLeft="@dimen/dimen_20dp"
+                   android:paddingStart="@dimen/dimen_20dp"
+                   android:paddingRight="@dimen/dimen_20dp"
+                   android:paddingEnd="@dimen/dimen_20dp">
+
+                   <TextView
+                       android:id="@+id/pupilName"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textColor="@android:color/black"
+                       android:gravity="center"
+                       android:textSize="@dimen/textSize16sp"/>
+
+                   <TextView
+                       android:id="@+id/pupilCountry"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textColor="@android:color/black"
+                       android:gravity="center"
+                       android:layout_marginTop="@dimen/dimen_10dp"
+                       android:textSize="@dimen/textSize16sp"/>
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <fragment
+        android:id="@+id/mapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_above="@+id/bottomLayout"
+        android:name="com.google.android.gms.maps.MapFragment" />
+
+
+</RelativeLayout>

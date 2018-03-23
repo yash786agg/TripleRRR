@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/viewForeground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:id="@+id/crop_detail_imgv_rltv"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:layout_weight="0.3">
+
+            <ImageView
+                android:id="@+id/flagImgv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/img_custom_rectangle"/>
+
+            <ProgressBar
+                android:id="@+id/flagImgProgress"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@android:color/holo_green_light"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:weightSum="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_0dp"
+                android:text="@string/name"
+                android:gravity="start|center"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textSize14sp"/>
+
+            <TextView
+                android:id="@+id/countrytxt"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_0dp"
+                android:text="@string/country"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textSize14sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

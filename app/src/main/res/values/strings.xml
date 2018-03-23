@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">BIAAssign</string>
+    <string name="google_maps_key">AIzaSyDw3O05zS1VT5YUacBEt7_D041kRwkB6Ko</string>
+
+    <string name="databaseTableName">PupilsDatabase</string>
+    <string name="connectWifiDataConn">Please connect to your Wifi or Data Connection..</string>
+    <string name="noMoreData">No more data to show</string>
+    <string name="noData">No data to show</string>
+    <string name="fail">Fail</string>
+    <string name="error">error</string>
+    <string name="somethingWentWring">Something went wrong</string>
+
+    <!--Get all pupils Params-->
+
+    <string name="itemsParams">items</string>
+    <string name="pupilIdParams">pupilId</string>
+    <string name="countryParmas">country</string>
+    <string name="nameParmas">name</string>
+    <string name="imageParmas">image</string>
+    <string name="latitudeParmas">latitude</string>
+    <string name="longitudeParmas">longitude</string>
+    <string name="itemCountParams">itemCount</string>
+
+    <!--MainActivity-->
+
+    <string name="pupils">Pupils</string>
+    <string name="loading">Loading</string>
+    <string name="name">Name: </string>
+    <string name="country">Country: </string>
+    <string name="retry">Re-try</string>
+    <string name="pupilCannotDeleted">Pupil can\'t be deleted</string>
+
+    <!--Pupils Details-->
+
+    <string name="update">Update</string>
+    <string name="pupilDetail">Pupil detail-</string>
+
+</resources>
